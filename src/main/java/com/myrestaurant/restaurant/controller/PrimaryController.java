@@ -25,7 +25,7 @@ public class PrimaryController {
     }
 
     @RequestMapping(value = "/get_order_status", method = RequestMethod.GET)
-    public HashMap<String, Object> getOrderStatus(@RequestParam(value = "order_id") String orderId){
+    public HashMap<String, Object> getOrderStatus(@RequestParam(value = "order_id") String orderId) throws ParseException {
         return primaryService.getOrderStatus(orderId);
     }
 
